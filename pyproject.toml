@@ -33,7 +33,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-pandas=["pandas~=2.1","pandas-stubs~=2.1"]
+pandas=["pandas~=2.0","pandas-stubs~=2.0"]
 numpy=["numpy~=1.26"]
 all=["event-horizon-py[pandas,numpy]"]
 dev=["event-horizon-py[all]","ruff~=0.1.9","black~=23.12.1","mypy~=1.8.0","pytest"]
