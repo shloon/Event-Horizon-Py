@@ -25,10 +25,14 @@ jobs:
     - name: Lint with Ruff
       uses: chartboost/ruff-action@v1
 
-    - name: Typecheck
+    - name: Typecheck with MyPy
       run: |
         rm -rf build
         python3 -m mypy .
+      shell: bash
+
+    - name: Check formatting
+      run: black --check .
       shell: bash
 
     - name: Run tests and generate coverage data
