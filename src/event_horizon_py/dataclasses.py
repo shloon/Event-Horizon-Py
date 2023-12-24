@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
+
 @dataclass
 class Vector3:
     x: float
@@ -69,7 +70,7 @@ class RecordingData:
     frames: List[RecordingFrameData]
 
     @classmethod
-    def from_dict(cls, data: dict) -> 'RecordingData':
+    def from_dict(cls, data: dict) -> "RecordingData":
         return cls(
             version=data["version"],
             metadata=RecordingMetadata(

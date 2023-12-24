@@ -6,7 +6,6 @@ import brotli
 
 
 class TestRecording(unittest.TestCase):
-
     @classmethod
     def setUpClass(cls):
         script_dir = os.path.dirname(os.path.realpath(__file__))
@@ -15,7 +14,9 @@ class TestRecording(unittest.TestCase):
         cls.sample_file = file_path
 
         with open(cls.sample_file, "br") as file:
-            cls.sample_data = RecordingData.from_dict(json.loads(brotli.decompress(file.read())))
+            cls.sample_data = RecordingData.from_dict(
+                json.loads(brotli.decompress(file.read()))
+            )
 
     def test_from_file(self):
         recording = Recording.from_file(self.sample_file)
@@ -40,5 +41,6 @@ class TestRecording(unittest.TestCase):
         self.assertIsNotNone(np_array)
         self.assertEqual(np_array.ndim, 2)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

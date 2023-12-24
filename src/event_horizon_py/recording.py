@@ -22,6 +22,7 @@ np_dtype: List[Tuple[str, str]] = [
     ("ScaleZ", "f4"),
 ]
 
+
 class Recording:
     _raw_data: RecordingData
 
@@ -29,7 +30,7 @@ class Recording:
         self._raw_data = data
 
     @classmethod
-    def from_file(cls, filename: PathLike) -> 'Recording':
+    def from_file(cls, filename: PathLike) -> "Recording":
         with open(filename, "br") as file:
             data = RecordingData.from_dict(json.loads(brotli.decompress(file.read())))
 
