@@ -33,10 +33,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-pandas=["pandas~=2.0","pandas-stubs~=2.0"]
+pandas=["pandas~=2.0"]
 numpy=["numpy~=1.24"]
 all=["event-horizon-py[pandas,numpy]"]
-dev=["event-horizon-py[all]","ruff~=0.1.9","black~=23.12.1","mypy~=1.8.0","pytest"]
+dev=["event-horizon-py[all]","pandas-stubs~=2.0","ruff~=0.1.9","black~=23.12.1","mypy~=1.8.0","pytest"]
 
 [project.urls]
 "Homepage" = "https://github.com/shloon/event-horizon-py"
