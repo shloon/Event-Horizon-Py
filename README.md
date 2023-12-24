@@ -28,11 +28,11 @@ pip install git+https://github.com/Shloon/Event-Horizon-Py.git
 
 It is recommended to download with the `all` extras flag, like so:
 ```sh
-pip install git+https://github.com/Shloon/Event-Horizon-Py.git[all]
+pip install git+https://github.com/Shloon/Event-Horizon-Py.git#egg=Event-Horizon-Py[all]
 ```
 
 However, you can individually enable `numpy` or `pandas`, like so:
 ```sh
-pip install git+https://github.com/Shloon/Event-Horizon-Py.git[numpy] # for numpy
-pip install git+https://github.com/Shloon/Event-Horizon-Py.git[pandas] # for pandas
+pip install git+https://github.com/Shloon/Event-Horizon-Py.git#egg=Event-Horizon-Py[numpy] # for numpy
+pip install git+https://github.com/Shloon/Event-Horizon-Py.git#egg=Event-Horizon-Py[pandas] # for pandas
 ```
