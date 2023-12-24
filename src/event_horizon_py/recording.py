@@ -3,7 +3,7 @@ from .dataclasses import FrameRate, RecordingData, RecordingFrameData, Recording
 import brotli
 import json
 import os
-from typing import List, Tuple, Type, Union, TypeVar
+from typing import List, Tuple, Union
 
 PathLike = Union[str, bytes, os.PathLike]
 
